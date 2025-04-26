@@ -11,11 +11,12 @@ var DefaultConfig = map[string]interface{}{
 		"sender": map[string]interface{}{
 			"type": "kafka",
 			"config": map[string]interface{}{
+				"schema":        "kafka://",
 				"kafka_brokers": "localhost:9092",
 				"kafka_cert":    "service.cert",
 				"kafka_key":     "service.key",
 				"kafka_pem":     "ca.pem",
-				"kafka_auth":    "TLS",
+				"kafka_auth":    "PLAINTEXT", // local
 			},
 		},
 		"event_config": map[string]interface{}{
